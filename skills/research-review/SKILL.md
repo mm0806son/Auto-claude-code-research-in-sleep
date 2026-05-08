@@ -186,6 +186,10 @@ Update project memory/notes with key review conclusions.
 ### For mock review:
 "Please write a mock NeurIPS review with: Summary, Strengths, Weaknesses, Questions for Authors, Score, Confidence, and What Would Move Toward Accept."
 
+## Output Protocols
+
+> - **[Output Language Protocol](../shared-references/output-language.md)** — respect the project's language setting
+
 ## Review Tracing
 
 After each reviewer call (`mcp__codex__codex`, `mcp__codex__codex-reply`, `mcp__manual_review__review`, or `mcp__manual_review__review_reply`), save the trace following `shared-references/review-tracing.md` (Policy C — forensic; never silently skip). Use `save_trace.sh` (resolved per the chain in `shared-references/integration-contract.md` §2) or write files directly to `.aris/traces/<skill>/<date>_run<NN>/`. Respect the `--- trace:` parameter (default: `full`).
