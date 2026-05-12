@@ -688,7 +688,7 @@ commit_manifest() {
 # ─── CLAUDE.md best-effort update (compare-and-swap) ──────────────────────────
 update_claude_doc() {
     local installed_names_file="$1"
-    [[ -f "$DOC_FILE" ]] || { log "  (skip CLAUDE.md: file not present)"; return 0; }
+    [[ -f "$DOC_FILE" ]] || { log "  (skip $DOC_FILE_NAME: file not present)"; return 0; }
     if $NO_DOC; then return 0; fi
 
     local original new_block tmp
