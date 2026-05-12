@@ -61,7 +61,11 @@ MANIFEST_PREV_NAME="installed-skills.txt.prev"
 ARIS_DIR_NAME=".aris"
 LOCK_DIR_NAME=".install.lock.d"
 SKILLS_REL=".claude/skills"
-DOC_FILE_NAME="CLAUDE.md"
+# Default: write ARIS block to CLAUDE.local.md (kept out of team-shared git history).
+# Projects that want the block in the team-shared CLAUDE.md can set
+#   ARIS_DOC_FILE=CLAUDE.md
+# before invoking this script.
+DOC_FILE_NAME="${ARIS_DOC_FILE:-CLAUDE.local.md}"
 BLOCK_BEGIN="<!-- ARIS:BEGIN -->"
 BLOCK_END="<!-- ARIS:END -->"
 SAFE_NAME_REGEX='^[A-Za-z0-9][A-Za-z0-9._-]*$'
